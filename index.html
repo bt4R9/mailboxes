@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link type="text/css" rel="stylesheet" href="css/style.css" />
+        <style>
+            html,body { padding: 10px }
+        </style>
+    </head>
+    <body>
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <div class="panel-title">Actions</div>
+            </div>
+            <div class="panel-body">
+                <button type="button" class="btn js-add-message">Add message</button>
+                <button type="button" class="btn js-check-all">Check all</button>
+                <button type="button" class="btn js-uncheck-all">Uncheck all</button>
+                <button type="button" class="btn js-remove-selected">Remove selected</button>
+            </div>
+        </div>
+        <script src="js/jquery.js"></script>
+        <script src="js/underscore.js"></script>
+        <script src="js/backbone.js"></script>
+        <script src="js/app.js"></script>
+        <script id="message-view" type="text/template">
+            #<%- num %>
+            &nbsp;
+            <input type="checkbox" />
+            &nbsp;&nbsp;&nbsp;
+            <%- subject %>
+            &nbsp;&nbsp;&nbsp;
+            <%- firstline %>
+            &nbsp;&nbsp;&nbsp;
+            <%- date %>
+            &nbsp;&nbsp;&nbsp;
+            <button class="btn js-edit-subject">Edit subject</button>
+            &nbsp;&nbsp;&nbsp;
+            <button class="btn js-edit-firstline">Edit firstline</button>
+            &nbsp;&nbsp;&nbsp;
+            <button class="btn js-remove">Delete</button>
+        </script>
+    </body>
+</html>
